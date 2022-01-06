@@ -8,11 +8,7 @@ app.set('view engine','ejs');
 
 app.set('views','./views');
 
-app.get('/',function(req,res){
-
-    res.render('home');
-});
-
+app.use('/',require('./routes/home'));
 
 app.listen(port,function(err){
 
