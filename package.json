@@ -1,0 +1,19 @@
+{
+  "name": "todo_list",
+  "version": "1.0.0",
+  "description": "My Todo List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshanpandit/todo_list.git"
+  },
+  "author": "OshanPandit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oshanpandit/todo_list/issues"
+  },
+  "homepage": "https://github.com/oshanpandit/todo_list#readme"
+}
