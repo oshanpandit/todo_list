@@ -8,7 +8,6 @@ const connectDb=require('./config/mongoose');
 
 connectDb();
 
-const Todo=require('./models/todo');
 
 app.set('view engine','ejs');
 
