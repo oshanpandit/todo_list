@@ -2,10 +2,48 @@
 <head>
    
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/20dd008c58.js" crossorigin="anonymous"></script> 
 </head>
 <body>
 
-    <h1>Hello World!!</h1>
+    <h1>Todo List!!</h1>
+
+    <div>
+
+        <ul>
+
+            <% for(let i=0;i<todo_list.length;i++){ %>
+
+                <li>
+
+                    <p style="display: inline-block"><%=todo_list[i].task%></p>&ensp;&ensp;
+
+                    <a href="/delete-task/?id=<%= todo_list[i]._id %>">
+
+                        <i class="fas fa-times"></i>
+
+                    </a>
+
+                </li>
+
+            <%}%>
+
+        </ul>
+
+    </div>
+
+    <div>
+
+    
+        <form action="/add-task" method="post">
+
+            <input type="text" name="task" placeholder="Enter the task">
+
+            <button type="submit">Add Task</button>
+
+        </form>
+
+    </div>
     
 </body>
 </html>

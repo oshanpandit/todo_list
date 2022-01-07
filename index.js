@@ -4,14 +4,21 @@ const app=express();
 
 const port=8000;
 
+const connectDb=require('./config/mongoose');
+
+connectDb();
+
+const Todo=require('./models/todo');
+
 app.set('view engine','ejs');
 
 app.set('views','./views');
 
 app.use('/',require('./routes/home'));
 
-app.listen(port,function(err){
 
+app.listen(port,function(err){
+ 
     if(err){
 
 
