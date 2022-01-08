@@ -9,21 +9,21 @@
 </head>
 <body>
 
-    <h1>Todo List</h1>
+    <h1 id="heading">Todo List&nbsp;!</h1>
 
-    <div>
+    <div id="task-items">
 
-        <ul>
+        <ul type="none">
 
             <% for(let i=0;i<todo_list.length;i++){ %>
 
                 <li>
 
-                    <p style="display: inline-block"><%=todo_list[i].task%></p>&ensp;&ensp;
+                    <i class="far fa-hand-point-right">&ensp;</i><p style="display: inline-block"><%=todo_list[i].task%></p>&ensp;
 
                     <a href="/delete-task/?id=<%= todo_list[i]._id %>">
 
-                        <i class="fas fa-times"></i>
+                        <button id="task-done">Done!</button>
 
                     </a>
 
@@ -40,9 +40,9 @@
     
         <form action="/add-task" method="post">
 
-            <input type="text" name="task" placeholder="Enter the task" required>
+            <input type="text" name="task" placeholder="Enter the task" required id="form-input">
 
-            <button type="submit">Add Task</button>
+            <button type="submit" id="submit-button">Add Task</button>
 
         </form>
 
