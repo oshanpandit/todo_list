@@ -1,3 +1,4 @@
+const { urlencoded } = require('express');
 const express=require('express');
 
 const app=express();
@@ -9,11 +10,17 @@ const connectDb=require('./config/mongoose');
 connectDb();
 
 
+app.use(urlencoded());
+
+app.use(express.static('./assets'));
+
+app.use('/',require('./routes/home'));
+
 app.set('view engine','ejs');
 
 app.set('views','./views');
 
-app.use('/',require('./routes/home'));
+
 
 
 app.listen(port,function(err){
