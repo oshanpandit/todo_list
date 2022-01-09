@@ -1,4 +1,4 @@
-const { urlencoded } = require('express');
+// const { urlencoded } = require('express');
 const express=require('express');
 
 const app=express();
@@ -10,7 +10,7 @@ const connectDb=require('./config/mongoose');
 connectDb();
 
 
-app.use(urlencoded());
+app.use(express.urlencoded());
 
 app.use(express.static('./assets'));
 
