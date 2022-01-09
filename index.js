@@ -37,3 +37,5 @@ app.listen(port,function(err){
 
     return;
 });
+
+console.log("hello");
